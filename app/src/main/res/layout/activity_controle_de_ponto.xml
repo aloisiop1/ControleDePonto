@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="0dp"
+    android:background="@color/white"
+    tools:context=".ControleDePontoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="0dp"
+        android:background="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textoBarra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:drawableLeft="@drawable/fingerprint32"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="CONTROLE DE PONTO"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/botaoEntrada"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@color/botao"
+        android:elevation="6dp"
+        android:text="07:30"
+        android:textSize="15sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barra"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <Button
+        android:id="@+id/botaoAlmoco"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@color/botao"
+        android:elevation="6dp"
+        android:text="12:00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/botaoEntrada"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/botaoRetorno"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@color/botao"
+        android:elevation="6dp"
+        android:text="13:30"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/botaoEntrada"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HORÁRIO"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoEntrada"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <ImageButton
+        android:id="@+id/botaoHoraAtual"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="72dp"
+        android:layout_height="71dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/t1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horario"
+        app:layout_constraintVertical_bias="0.26"
+        app:srcCompat="@drawable/clock72" />
+
+    <ImageButton
+        android:id="@+id/botaoSalvar"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botaoHoraAtual"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ok72" />
+
+    <ImageButton
+        android:id="@+id/botaoRefresh"
+        style="@android:style/Widget.Material.Light.ImageButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/t1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botaoHoraAtual"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/refresh72" />
+
+    <TimePicker
+        android:id="@+id/t1"
+        android:layout_width="327dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/fundo"
+        android:elevation="2dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saida"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/saida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/festa"
+        android:elevation="6dp"
+        android:text="00:00"
+        android:textColor="#D32F2F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelSaida"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/labelSaida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:elevation="6dp"
+        android:text="SAÍDA"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSalvar"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>
+
